@@ -39,6 +39,7 @@ export async function GET() {
             
       
             const updatedProduct = await Product.findOneAndUpdate(
+              { url: product.url},
               { url: scrapedProduct.url },
               product,
             );
